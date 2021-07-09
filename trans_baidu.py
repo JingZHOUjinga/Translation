@@ -55,8 +55,8 @@ def main():
 	#--inlan 或-il，默认是fra，可选择范围是auto、fra,en等，类型是str
     parser.add_argument("--inlan","-il",metavar='input_lang',required=False, dest='input_lang', action='store',choices={"fra","auto","en"}, default="fra", type=str)
     
-    #--outlan 或-ol，默认是zh，可选择范围是auto、zh等，类型是str
-    parser.add_argument("--outlan","-ol",metavar='output_lang',required=False, dest='output_lang', action='store',choices={"zh","auto"}, default="zh", type=str)
+    #--outlan 或-ol，默认是zh，可选择范围是en、zh等，类型是str
+    parser.add_argument("--outlan","-ol",metavar='output_lang',required=False, dest='output_lang', action='store',choices={"zh","en","fra"}, default="zh", type=str)
     args = parser.parse_args()
     print(args)
     if args.input_str:
